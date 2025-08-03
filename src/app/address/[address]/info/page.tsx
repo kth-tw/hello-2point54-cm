@@ -10,7 +10,7 @@ export default async function Page(props: { params: Promise<{ address: string }>
       {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${process.env['1INCH_API_KEY']}`,
+          'Authorization': `Bearer ${process.env.ONEINCH_API_KEY}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ tokens: [process.env.TOKEN_ADDRESS] }),
